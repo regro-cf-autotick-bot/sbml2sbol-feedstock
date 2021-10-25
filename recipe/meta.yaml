@@ -1,5 +1,5 @@
 {% set name = "sbml2sbol" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/neilswainston/SbmlToSbol/archive/{{ version }}.tar.gz
-  sha256: 233c50c89bea2d0cc490947470d146cc1cc475defc8d3e094b6daa7d7113c3ea
+  sha256: 1b101d3a4ee90c8c0ffcc0cb339a96fae2bebfc55d3156e096da83680d8c0149
 
 build:
   number: 0
