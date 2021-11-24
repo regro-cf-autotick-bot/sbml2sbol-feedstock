@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python=3.7
     - pip
   run:
-    - python >=3.6
+    - python=3.7
     - python-libsbml
-    - pysbol2
     - synbiochem-py
+    - requests
 
 test:
   source_files:
