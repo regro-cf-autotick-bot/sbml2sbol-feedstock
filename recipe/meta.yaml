@@ -1,5 +1,5 @@
 {% set name = "sbml2sbol" %}
-{% set version = "0.1.11" %}
+{% set version = "0.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/neilswainston/SbmlToSbol/archive/{{ version }}.tar.gz
-  sha256: 2c30cd73edbedc698fd6affede362752e387c3324035e7d9219b914db83f7dc2
+  sha256: 813d359eef17cd111265d3361195d3282bcbba3e15057905897aea8aed7e6000
 
 build:
   number: 0
@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python =3.7
     - pip
   run:
-    - python >=3.6
+    - python =3.7
     - python-libsbml
-    - pysbol2
     - synbiochem-py
+    - requests
 
 test:
   source_files:
