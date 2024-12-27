@@ -10,16 +10,16 @@ source:
   sha256: cb8aec05868ae38095ee55523231d429851c8e7731e85cd4c964d39ee5ce2bf2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
 
 requirements:
   host:
-    - python =3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python =3.7
+    - python >={{ python_min }}
     - python-libsbml
     - synbiochem-py
     - requests
@@ -31,6 +31,7 @@ test:
     - {{ name|lower }}
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - python -m {{ name|lower }} --help
     - pytest -v tests
